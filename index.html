@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>materi-javascript</title>
+  </head>
+  <body>
+    <label for="nilai">Masukan sebuah nilai</label>
+    <br />
+    <input id="angka" placeholder="Masukan nilai" style="text-align: center" />
+
+    <button onclick="myFunction()">Send</button>
+
+    <p id="demo"></p>
+    <script>
+      function myFunction() {
+        var angka = document.getElementById("angka").value;
+        var nilai = parseFloat(angka);
+        if (nilai > 81) {
+          document.writeln("Nilai A");
+        } else if (nilai > 76) {
+          document.writeln("Nilai B");
+        } else if (nilai > 71) {
+          document.writeln("Nilai C");
+        } else {
+          document.writeln("Nilai D");
+        }
+        document.getElementById("demo").innerHTML;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tombol Berubah Warna</title>
+</head>
+<body>
+  <button id="tombol">Klik Saya</button>
+
+  <script>
+    const tombol = document.getElementById('tombol');
+
+    tombol.addEventListener('click', function() {
+      const warna = getRandomColor();
+
+
+      tombol.style.backgroundColor = warna;
+    });
+
+    function getRandomColor() {
+      const letters = '0123456789ABCDEF';
+      let color = '#';
+      for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+  </script>
+</body>
+</html>

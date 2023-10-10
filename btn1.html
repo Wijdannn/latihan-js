@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ubah</title>
+</head>
+<body>
+    <button id="tombol" onclick="tombol()" style="width: 50%; height: 200px;">klik sini</button>
+
+    <script>
+        function tombol(){
+            const tombol = document.getElementById('tombol');
+            const warna = getRandomColor();
+            tombol.style.backgroundColor = warna;
+        }
+
+        function getRandomColor(){
+            const letters = '123456789ABCDEFGHI';
+            let kolor = '#';
+
+            for(let i = 0; i < 3; i ++){
+                kolor += letters[Math.floor(Math.random() * 15)];
+
+            }
+            return kolor;
+        }
+    </script>
+</body>
+</html>

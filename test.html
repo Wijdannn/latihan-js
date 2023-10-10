@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tombol berubah warna</title>
+    <style>
+        #btn {
+            text-shadow: 15px;
+        }
+    </style>
+  </head>
+  <body>
+    <button id="btn" style="width: 100px; height: 50px ;">klik disini</button>
+
+    <script>
+      const btn = document.getElementById("btn");
+      btn.addEventListener("click", function () {
+        const warna = getRandomColor();
+        btn.style.backgroundColor = warna;
+      });
+
+      function getRandomColor() {
+        const letters = "123456789ABCDEF";
+        let color = "#";
+        for (let i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+      }
+    </script>
+  </body>
+</html>
